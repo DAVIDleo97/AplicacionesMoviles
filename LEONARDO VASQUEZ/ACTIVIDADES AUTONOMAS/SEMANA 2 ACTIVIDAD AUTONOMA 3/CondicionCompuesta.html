@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>CondicionCompuestas</title>
+</head>
+<body>
+
+	<script>
+		let nota1, nota2, nota3;
+		let estudiante;
+
+		estudiante= prompt("Ingrese el nombre y apellido del estudiante: ");
+		nota1= prompt("Ingrese la nota 1 tomando en cuenta que debe ir del 1 al 10: ");
+		nota2= prompt("Ingrese la nota 2 tomando en cuenta que debe ir del 1 al 10: ");
+		nota3= prompt("Ingrese la nota 3 tomando en cuenta que debe ir del 1 al 10: ");
+
+		nota1= parseFloat(nota1);
+		nota2= parseFloat(nota2);
+		nota3= parseFloat(nota3);
+
+		let promedio= (nota1+nota2+nota3)/3;
+
+		if (promedio>= 7 && promedio<= 10) {
+
+			document.write("El estudiante "+ estudiante+ " aprobó la asignatura con la calificacion: "+ promedio+ "/10");
+
+		}else if (promedio>= 4 && promedio< 7) {
+
+			document.write("El estudiante "+ estudiante+ " debe rendir el supletorio con la calificacion: "+ promedio+ "/10");
+
+		}else if (promedio< 4 && promedio> 0) {
+
+			document.write("El estudiante "+ estudiante+ " reprobo la materia con la calificacion: "+ promedio+ "/10");
+
+		} else {
+
+			document.write("Error en valores");
+
+		}
+
+
+	</script>
+
+</body>
+</html>

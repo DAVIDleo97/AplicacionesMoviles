@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>doWhile</title>
+</head>
+<body>
+
+	<script>
+
+		let num;
+
+
+		do{
+
+			num= parseInt(prompt("Ingrese un número entre 0 y 150 (0 para terminar)"));
+
+			if (num> 0 && num<= 150) {
+
+				if (num< 10) {
+
+					document.write(" El número "+ num+ " tiene un digito");
+
+				} else if (num< 100) {
+
+					document.write(" El número "+ num+ " tiene dos digitos");
+
+				} else {
+
+					document.write(" El número "+ num+ " tiene tres digitos");
+
+				}
+			} else if (num== 0) {
+
+				document.write("Gracias por utilizar nuestro progrma");
+
+			}else {
+
+				document.write("valor ingresado debe ser entre 0 y 150 y usted ingreso: "+ num);
+
+			}
+
+			document.write('<br>')
+
+		} while (num!= 0);
+
+		
+
+	</script>
+
+</body>
+</html>

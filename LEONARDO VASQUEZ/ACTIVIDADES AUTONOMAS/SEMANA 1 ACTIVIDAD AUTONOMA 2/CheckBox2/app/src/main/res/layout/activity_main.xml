@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <CheckBox
+        android:id="@+id/chk_sumar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="56dp"
+        android:text="SUMAR"
+        app:layout_constraintBottom_toTopOf="@+id/chk_restar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etn_valor2" />
+
+    <TextView
+        android:id="@+id/tv_resultado"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="57dp"
+        android:layout_marginEnd="57dp"
+        android:layout_marginBottom="38dp"
+        android:text="RESULTADO"
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chk_dividir" />
+
+    <CheckBox
+        android:id="@+id/chk_multiplicar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MULTIPLICAR"
+        app:layout_constraintBottom_toTopOf="@+id/chk_dividir"
+        app:layout_constraintStart_toStartOf="@+id/chk_restar"
+        app:layout_constraintTop_toBottomOf="@+id/chk_restar" />
+
+    <CheckBox
+        android:id="@+id/chk_dividir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="56dp"
+        android:text="DIVIDIR"
+        app:layout_constraintBottom_toTopOf="@+id/tv_resultado"
+        app:layout_constraintStart_toStartOf="@+id/chk_multiplicar"
+        app:layout_constraintTop_toBottomOf="@+id/chk_multiplicar" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="64dp"
+        android:onClick="operacion"
+        android:text="OPERACION"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.524"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_resultado" />
+
+    <CheckBox
+        android:id="@+id/chk_restar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="RESTAR"
+        app:layout_constraintBottom_toTopOf="@+id/chk_multiplicar"
+        app:layout_constraintStart_toStartOf="@+id/chk_sumar"
+        app:layout_constraintTop_toBottomOf="@+id/chk_sumar" />
+
+    <EditText
+        android:id="@+id/etn_valor1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="43dp"
+        android:layout_marginBottom="16dp"
+        android:ems="10"
+        android:hint="ingrese el primer valor"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/etn_valor2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etn_valor2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="94dp"
+        android:ems="10"
+        android:hint="ingrese el segundo valor"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/chk_sumar"
+        app:layout_constraintEnd_toEndOf="@+id/etn_valor1"
+        app:layout_constraintStart_toStartOf="@+id/etn_valor1"
+        app:layout_constraintTop_toBottomOf="@+id/etn_valor1" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Condicion If</title>
+</head>
+<body>
+
+	<script>
+		let nota1, nota2, nota3;
+
+		estudiante= prompt("Ingrese el nombre del estudiante: ");
+		nota1= prompt("Ingrese la nota 1: ");
+		nota2= prompt("Ingrese la nota 2: ");
+		nota3= prompt("Ingrese la nota 3: ");
+
+		let sumaTotal= parseInt(nota1)+ parseInt(nota2)+ parseInt(nota3);
+
+		if (sumaTotal>= 21) {
+
+			document.write("El estudiante aprobó la asignatura con: "+ sumaTotal+ "/30");
+		}else {
+
+			document.write("El estudiante reprobó la asignatura con: "+ sumaTotal+ "/30");
+
+		}
+
+
+	</script>
+
+</body>
+</html>

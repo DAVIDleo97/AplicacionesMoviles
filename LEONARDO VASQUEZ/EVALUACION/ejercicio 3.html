@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>ejercicio3</title>
+</head>
+<body>
+
+	<script>
+
+		let id, edad, contTotal= 0, contMasculino= 0, contFemenino= 0, contEdad= 0;
+		let genero;
+
+
+		do{
+
+			id= parseInt(prompt("Ingrese su numero de identificación (0 para terminar el proceso)"));
+			if (id!= 0) {
+
+				edad= parseInt(prompt("Ingrese su edad:"));
+				genero= prompt("Ingrese su genero (masculino o femenino):");
+
+				contTotal++;
+
+				if (genero=== "masculino") {
+
+					contMasculino++;
+				}
+				if (genero=== "femenino") {
+
+					contFemenino++;
+				}
+				if (edad>= 16 && edad<= 65 && genero=== "masculino") {
+
+					contEdad++;
+				}
+
+			}
+
+		} while (id!= 0);
+
+		document.write("RESULTADOS"+ '<br>');
+		document.write("Total de personas censadas: "+ contTotal+ '<br>');
+		document.write("Total de varones censados: "+ contMasculino+ '<br>');
+		document.write("Total de mujeres censadas: "+ contFemenino+ '<br>');
+		document.write("Total de varones entre 16 y 65 años censados: "+ contEdad);
+
+	</script>
+
+</body>
+</html>
